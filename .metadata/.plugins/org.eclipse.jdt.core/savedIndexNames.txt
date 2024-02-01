@@ -1,6 +1,0 @@
-INDEX VERSION 1.134+C:\Users\diogo\OneDrive\Documents\CursoJava\Exercícios\.metadata\.plugins\org.eclipse.jdt.core
-2992045501.index
-3412880106.index
-3990765510.index
-2974320151.index
-1865797976.index

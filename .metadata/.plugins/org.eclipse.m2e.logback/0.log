@@ -1,8 +1,0 @@
-2024-02-01 20:00:02,980 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-02-01 20:00:29,552 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.3; built: 2023-10-27T03:25:22.284Z; git: a873259fd5af141dedaa6c7fa8fe8fbdedce0d61; jvm 17.0.9+9
-2024-02-01 20:00:29,601 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@69baaec1{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@2fef454e{STARTED}}
-2024-02-01 20:00:29,602 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
-2024-02-01 20:00:29,626 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@6ddece1d{HTTP/1.1, (http/1.1)}{127.0.0.1:51296}
-2024-02-01 20:00:29,631 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@788261c7{STARTING}[12.0.3,sto=0] @85800ms
-2024-02-01 20:00:30,161 [qtp966316442-90] INFO  o.e.j.e.nested.ContextHandler._help - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
-2024-02-01 20:00:30,608 [qtp966316442-90] INFO  o.e.j.e.nested.ContextHandler._help - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
