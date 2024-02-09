@@ -42,7 +42,14 @@ public class Main {
 		System.out.println("Updated account data:");
 		System.out.println(acc.getInitialDeposit());
 		
-		System.out.println();
+		System.out.println("Enter a Withdraw value: ");
+		double newWithdraw = sc.nextDouble();
+		
+		acc.withdraw(newWithdraw);
+		
+		System.out.println("Updated account data:");
+		System.out.println(acc.getInitialDeposit());
+		
 		
 		sc.close();
 	}

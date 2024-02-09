@@ -37,4 +37,9 @@ public class Account {
 		this.initialDeposit += deposit;
 		return;
 	}
+	
+	public void withdraw(double value) {
+		this.initialDeposit -= value;
+		return;
+	}
 }
