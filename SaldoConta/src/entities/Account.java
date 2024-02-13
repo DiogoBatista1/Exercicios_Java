@@ -3,43 +3,30 @@ package entities;
 public class Account {
 	public String name;
 	public double accountNumber;
-	public double initialDeposit;
+	public double balance;
 	public String theresDeposit;
 	
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public double getAccountNumber() {
 		return accountNumber;
 	}
-	public void setAccountNumber(double accountNumber) {
-		this.accountNumber = accountNumber;
-	}
-	public double getInitialDeposit() {
-		return initialDeposit;
-	}
-	public void setInitialDeposit(double initialDeposit) {
-		this.initialDeposit = initialDeposit;
+	public double getBalance() {
+		return balance;
 	}
 	
-	public void account(String name, double accNumber, double iniDeposit) {
-		name = getName();
-		accNumber = getAccountNumber();
-		iniDeposit = getInitialDeposit();
-		
-		return;
-	}
+	public Account(String name, double accNumber, double iniDeposit) {
+		this.name = name;
+		this.accountNumber = accNumber;
+		depositAcc(iniDeposit);
+		}
 	
 	public void depositAcc(double deposit) {
-		this.initialDeposit += deposit;
-		return;
+		this.balance += deposit;
 	}
 	
 	public void withdraw(double value) {
-		this.initialDeposit -= value;
-		return;
+		this.balance -= value + 5;
 	}
 }
