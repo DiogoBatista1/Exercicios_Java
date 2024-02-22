@@ -9,11 +9,12 @@ public class Pensionato {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		Room rooms[] = new Room[9];
+		
 		System.out.println("How many rooms will be rented? ");
 		int rentedRooms = sc.nextInt();
 		sc.nextLine();
 		
-		Room rooms[] = new Room[rentedRooms];
 		
 		for(int i = 0; i < rentedRooms; i++) {
 			System.out.printf("Rent #%d: \n", i + 1);
