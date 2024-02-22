@@ -1,3 +1,5 @@
 # .gitignore
 .metadata/
-
+Pensionato/.classpath
+Pensionato/.project
+Pensionato/.settings/
