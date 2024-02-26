@@ -44,10 +44,10 @@ public class Employees {
             double newSalary = salary.get(index) * (1 + percentage / 100);
             salary.set(index, newSalary);
         } else {
-            System.out.println("Employee id not found.");
+            System.out.println("This id does not exist!");
         }
 
-        System.out.println("Updated employee details:");
+        System.out.println("List of employees:");
         for (int i = 0; i < numEmployees; i++) {
             System.out.printf("%d, %s, %.2f%n", id.get(i), name.get(i), salary.get(i));
         }
