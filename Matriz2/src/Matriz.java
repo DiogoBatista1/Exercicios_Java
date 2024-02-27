@@ -25,6 +25,27 @@ public class Matriz {
 			System.out.println();
 		}
 		
+		System.out.println("Digite o número desejado: ");
+		int wishNum = sc.nextInt();
+		boolean condition = false;
+		
+		for(int i = 0; i < mat.length; i++) {
+			for(int j = 0; j < mat[i].length; j++) {
+				if(mat[i][j] == wishNum) {
+					condition = true;
+					System.out.printf("Postion: %d, %d%n", i, j);
+					System.out.printf("Left: %d%n", mat[i][j - 1]);
+					System.out.printf("Right: %d%n", mat[i][j + 1]);
+					System.out.printf("Top: %d%n", mat[i - 1][j]);
+					System.out.printf("Bottom: %d%n", mat[i + 1][j]);
+				} 
+			}
+			
+			if (!condition) {
+	            System.out.println("Número não encontrado na matriz.");
+	        }
+			System.out.println();
+		}
 		
 		sc.close();
 	}
