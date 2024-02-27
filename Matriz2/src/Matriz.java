@@ -34,10 +34,20 @@ public class Matriz {
 				if(mat[i][j] == wishNum) {
 					condition = true;
 					System.out.printf("Postion: %d, %d%n", i, j);
-					System.out.printf("Left: %d%n", mat[i][j - 1]);
-					System.out.printf("Right: %d%n", mat[i][j + 1]);
-					System.out.printf("Top: %d%n", mat[i - 1][j]);
-					System.out.printf("Bottom: %d%n", mat[i + 1][j]);
+					
+					if(j > 0) {
+						System.out.printf("Left: %d%n", mat[i][j - 1]);
+					}
+					if(j < mat[i].length - 1) {
+						System.out.printf("Right: %d%n", mat[i][j + 1]);
+					}
+					if(i > 0) {
+						System.out.printf("Top: %d%n", mat[i - 1][j]);
+					}
+					if(i < mat.length - 1) {
+						System.out.printf("Bottom: %d%n", mat[i + 1][j]);
+					}
+					
 				} 
 			}
 			
