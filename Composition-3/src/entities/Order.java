@@ -8,12 +8,14 @@ import entities.enums.OrderStatus;
 public class Order {
 	private Date moment;
 	private OrderStatus status;
+	private Client client;
 	
 	public ArrayList<OrderItem> items = new ArrayList<>();
 	
-	public Order(Date moment, OrderStatus status) {
+	public Order(Date moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
+		this.client = client;
 	}
 
 
@@ -23,6 +25,15 @@ public class Order {
 
 	public void setMoment(Date moment) {
 		this.moment = moment;
+	}
+	
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
 	public OrderStatus getStatus() {
