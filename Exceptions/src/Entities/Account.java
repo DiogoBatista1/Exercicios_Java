@@ -1,24 +1,24 @@
 package Entities;
 
 public class Account {
-	private Double Integer;
+	private Double Number;
 	private String Holder;
 	private Double Balance;
 	private Double withdrawLimit;
 	
-	public Account(Double integer, String holder, Double balace, Double withdrawLimit) {
-		Integer = integer;
-		Holder = holder;
-		Double Balace = balace;
+	public Account(Double Number, String holder, Double balance, Double withdrawLimit) {
+		this.Number = Number;
+		this.Holder = holder;
+		this.Balance = balance;
 		this.withdrawLimit = withdrawLimit;
 	}
 
-	public Double getInteger() {
-		return Integer;
+	public Double getNumber() {
+		return Number;
 	}
 
-	public void setInteger(Double integer) {
-		Integer = integer;
+	public void setNumber(Double Number) {
+		this.Number = Number;
 	}
 
 	public String getHolder() {
@@ -26,7 +26,7 @@ public class Account {
 	}
 
 	public void setHolder(String holder) {
-		Holder = holder;
+		this.Holder = holder;
 	}
 
 	public Double getBalance() {
@@ -43,10 +43,10 @@ public class Account {
 	}
 	
 	public double Deposit(Double amount) {
-		return Balance + amount;
+		return Balance += amount;
 	}
 	
 	public double withdraw(Double amount) {
-		return Balance - amount;
+		return Balance -= amount;
 	}
 }
