@@ -1,36 +1,38 @@
 package Entities;
 
+import Exceptions.BusinessExceptions;
+
 public class Account {
-	private Double Number;
-	private String Holder;
-	private Double Balance;
+	private Double number;
+	private String holder;
+	private Double balance;
 	private Double withdrawLimit;
 	
 	public Account(Double Number, String holder, Double balance, Double withdrawLimit) {
-		this.Number = Number;
-		this.Holder = holder;
-		this.Balance = balance;
+		this.number = Number;
+		this.holder = holder;
+		this.balance = balance;
 		this.withdrawLimit = withdrawLimit;
 	}
 
 	public Double getNumber() {
-		return Number;
+		return number;
 	}
 
 	public void setNumber(Double Number) {
-		this.Number = Number;
+		this.number = Number;
 	}
 
 	public String getHolder() {
-		return Holder;
+		return holder;
 	}
 
 	public void setHolder(String holder) {
-		this.Holder = holder;
+		this.holder = holder;
 	}
 
 	public Double getBalance() {
-		return Balance;
+		return balance;
 	}
 
 
@@ -42,11 +44,21 @@ public class Account {
 		this.withdrawLimit = withdrawLimit;
 	}
 	
-	public double Deposit(Double amount) {
-		return Balance += amount;
+	public double deposit(Double amount) {
+		return balance += amount;
 	}
 	
 	public double withdraw(Double amount) {
-		return Balance -= amount;
+		validateWithdraw(amount);
+		return balance -= amount;
+	}
+	
+	public void validateWithdraw(double amount) {
+		if(amount > getWithdrawLimit()) {
+			throw new BusinessExceptions("Erro de saque: A quantia excede o limite de saque");
+		}
+		if (amount > getBalance()) {
+			throw new BusinessExceptions("Erro de saque: Saldo insuficiente");
+		}
 	}
 }
