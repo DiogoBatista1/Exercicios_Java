@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import Entities.Products;
+
 public class Program {
 	public static void main(String[] args) {
 		String inputFilePath = "Arquivos\\dados.csv";
@@ -23,20 +25,16 @@ public class Program {
 				BufferedWriter bw = new BufferedWriter(new FileWriter(outputFilePath))) {
 
 			String line;
-			String[] names = new String[5];
-			double[] value = new double[5];
-			int[] quantity = new int[5];
+			Products[] products = new Products[5];
 			int index = 0;
 
 			while ((line = br.readLine()) != null) {
 				// Divide a linha em campos utilizando a virgula como separador
 				String[] campos = line.split(",");
 
-				// Armazena o nome do produto no array de nomes
-				names[index] = campos[0];
-				value[index] = Double.parseDouble(campos[1]);
-				quantity[index] = Integer.parseInt(campos[2]);
-
+				// Cria um objeto Products com os dados do CSV e armazena no array
+				Products product = new Products(campos[0], Double.parseDouble(campos[1]), Integer.parseInt(campos[2]));
+				products[index] = product;
 				// incrementa o indice
 				index++;
 
@@ -49,10 +47,13 @@ public class Program {
 			}
 			// armazena texto no arquivo out.csv
 			for (int i = 0; i < index; i++) {
-				String textOutput = (names[i] + ", " + (value[i] * quantity[i]));
+				Products product = products[i];
+				String textOutput = product.getNames() + ", " + product.total();
 				bw.write(textOutput);
 				bw.newLine(); // escreve novas linhas no arquivo
 			}
+
+            System.out.println("\nArquivo summary.csv gerado com sucesso!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
