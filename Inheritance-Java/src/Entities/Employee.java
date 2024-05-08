@@ -2,13 +2,13 @@ package Entities;
 
 public class Employee {
 	private String name;
-	private Integer hours;
+	private int hours;
 	private Double valuePerHour;
 	
 	public Employee() {
 	}
 
-	public Employee(String name, Integer hours, Double valuePerHour) {
+	public Employee(String name, int hours, Double valuePerHour) {
 		this.name = name;
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
@@ -26,11 +26,11 @@ public class Employee {
 		this.name = name;
 	}
 
-	public Integer getHours() {
+	public int getHours() {
 		return hours;
 	}
 
-	public void setHours(Integer hours) {
+	public void setHours(int hours) {
 		this.hours = hours;
 	}
 

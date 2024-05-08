@@ -33,7 +33,7 @@ public class Program {
 				String[] campos = line.split(",");
 
 				// Cria um objeto Products com os dados do CSV e armazena no array
-				Products product = new Products(campos[0], Double.parseDouble(campos[1]), Integer.parseInt(campos[2]));
+				Products product = new Products(campos[0], Double.parseDouble(campos[1]), int.parseInt(campos[2]));
 				products[index] = product;
 				// incrementa o indice
 				index++;
